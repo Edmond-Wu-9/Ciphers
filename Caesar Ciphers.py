@@ -17,13 +17,25 @@ def encrypt(text,shift):
             encrypt_text += char
     return encrypt_text
 
+def decrypt(text,shift):
+    decrypt_text = encrypt(text,-shift)
+    return decrypt_text
+
+
+
 
 def main():
+    choice = input("Would like like to Encrypt or Decrypt? (E/D) :")
     text = input("Enter the secret text: ")
     shift = int(input("Enter the shift value: "))
 
-    encrypt_text = encrypt(text,shift)
-    print("Encrypted text:", encrypt_text)
+    if choice == "E":
+        encrypt_text = encrypt(text,shift)
+        print("Encrypted text:", encrypt_text)
+    else:
+        decrypt_text = decrypt(text,shift)
+        print("Dencrypted text:", decrypt_text)
+        
 
 if __name__ == "__main__":
     main()
