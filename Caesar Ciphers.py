@@ -17,11 +17,9 @@ def encrypt(text,shift):
             encrypt_text += char
     return encrypt_text
 
-def decrypt(text,shift):
+def decrypt(text,shift): #To decrypt, algo is the same, just go backwards 
     decrypt_text = encrypt(text,-shift)
     return decrypt_text
-
-
 
 
 def main():
@@ -35,7 +33,7 @@ def main():
     else:
         decrypt_text = decrypt(text,shift)
         print("Dencrypted text:", decrypt_text)
-        
+
 
 if __name__ == "__main__":
     main()
